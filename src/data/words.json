@@ -1,0 +1,162 @@
+[
+    {
+      "id": 1,
+      "word": "Ubiquitous",
+      "pronunciation": "yoo-bik-wi-tuhs",
+      "partOfSpeech": "adjective",
+      "meaning": "Present, appearing, or found everywhere",
+      "example": "Mobile phones have become ubiquitous in modern society."
+    },
+    {
+      "id": 2,
+      "word": "Ephemeral",
+      "pronunciation": "ih-fem-er-uhl",
+      "partOfSpeech": "adjective",
+      "meaning": "Lasting for a very short time",
+      "example": "The beauty of cherry blossoms is ephemeral, lasting only a few days."
+    },
+    {
+      "id": 3,
+      "word": "Pragmatic",
+      "pronunciation": "prag-mat-ik",
+      "partOfSpeech": "adjective",
+      "meaning": "Dealing with things sensibly and realistically",
+      "example": "We need a pragmatic approach to solve this complex problem."
+    },
+    {
+      "id": 4,
+      "word": "Quintessential",
+      "pronunciation": "kwin-tuh-sen-shuhl",
+      "partOfSpeech": "adjective",
+      "meaning": "Representing the most perfect example of a quality or class",
+      "example": "The little café is the quintessential Parisian experience."
+    },
+    {
+      "id": 5,
+      "word": "Serendipity",
+      "pronunciation": "ser-uhn-dip-i-tee",
+      "partOfSpeech": "noun",
+      "meaning": "The occurrence of fortunate discoveries by accident",
+      "example": "Finding my dream job was pure serendipity."
+    },
+    {
+      "id": 6,
+      "word": "Mellifluous",
+      "pronunciation": "muh-lif-loo-uhs",
+      "partOfSpeech": "adjective",
+      "meaning": "Sweet or musical; pleasant to hear",
+      "example": "She spoke in a mellifluous voice that captivated the audience."
+    },
+    {
+      "id": 7,
+      "word": "Verbose",
+      "pronunciation": "ver-bohs",
+      "partOfSpeech": "adjective",
+      "meaning": "Using or containing more words than needed",
+      "example": "His verbose explanation confused rather than clarified the concept."
+    },
+    {
+      "id": 8,
+      "word": "Resilient",
+      "pronunciation": "ri-zil-yuhnt",
+      "partOfSpeech": "adjective",
+      "meaning": "Able to recover quickly from difficulties",
+      "example": "Children are often remarkably resilient in the face of adversity."
+    },
+    {
+      "id": 9,
+      "word": "Esoteric",
+      "pronunciation": "es-uh-ter-ik",
+      "partOfSpeech": "adjective",
+      "meaning": "Intended for or understood by only a small number of people with specialized knowledge",
+      "example": "The professor's lecture was filled with esoteric terms."
+    },
+    {
+      "id": 10,
+      "word": "Juxtapose",
+      "pronunciation": "juhk-stuh-pohz",
+      "partOfSpeech": "verb",
+      "meaning": "To place different things side by side to compare or contrast them",
+      "example": "The museum exhibition juxtaposes ancient and modern artwork."
+    },
+    {
+      "id": 11,
+      "word": "Eloquent",
+      "pronunciation": "el-uh-kwuhnt",
+      "partOfSpeech": "adjective",
+      "meaning": "Fluent or persuasive in speaking or writing",
+      "example": "Her eloquent speech moved the entire audience to tears."
+    },
+    {
+      "id": 12,
+      "word": "Fastidious",
+      "pronunciation": "fa-stid-ee-uhs",
+      "partOfSpeech": "adjective",
+      "meaning": "Very attentive to and concerned about accuracy and detail",
+      "example": "He is fastidious about keeping his workspace clean and organized."
+    },
+    {
+      "id": 13,
+      "word": "Perennial",
+      "pronunciation": "puh-ren-ee-uhl",
+      "partOfSpeech": "adjective",
+      "meaning": "Lasting or existing for a long time; enduring",
+      "example": "Traffic congestion is a perennial problem in urban areas."
+    },
+    {
+      "id": 14,
+      "word": "Cacophony",
+      "pronunciation": "kuh-kof-uh-nee",
+      "partOfSpeech": "noun",
+      "meaning": "A harsh, discordant mixture of sounds",
+      "example": "The cacophony of car horns filled the busy intersection."
+    },
+    {
+      "id": 15,
+      "word": "Eclectic",
+      "pronunciation": "ih-klek-tik",
+      "partOfSpeech": "adjective",
+      "meaning": "Deriving ideas from a broad range of sources",
+      "example": "The restaurant offers an eclectic menu with dishes from around the world."
+    },
+    {
+      "id": 16,
+      "word": "Ambivalent",
+      "pronunciation": "am-biv-uh-luhnt",
+      "partOfSpeech": "adjective",
+      "meaning": "Having mixed feelings or contradictory ideas about something",
+      "example": "She felt ambivalent about moving to a new city."
+    },
+    {
+      "id": 17,
+      "word": "Laconic",
+      "pronunciation": "luh-kon-ik",
+      "partOfSpeech": "adjective",
+      "meaning": "Using very few words; brief and to the point",
+      "example": "His laconic response was simply 'Yes.'"
+    },
+    {
+      "id": 18,
+      "word": "Benevolent",
+      "pronunciation": "buh-nev-uh-luhnt",
+      "partOfSpeech": "adjective",
+      "meaning": "Kind, helpful, and generous",
+      "example": "The benevolent donor gave millions to support education initiatives."
+    },
+    {
+      "id": 19,
+      "word": "Pernicious",
+      "pronunciation": "per-nish-uhs",
+      "partOfSpeech": "adjective",
+      "meaning": "Having a harmful effect, especially in a gradual or subtle way",
+      "example": "The pernicious effects of the pollution weren't immediately apparent."
+    },
+    {
+      "id": 20,
+      "word": "Paradigm",
+      "pronunciation": "par-uh-dime",
+      "partOfSpeech": "noun",
+      "meaning": "A standard, perspective, or set of ideas; a way of looking at something",
+      "example": "Einstein's theory of relativity created a new paradigm in physics."
+    }
+  ]
