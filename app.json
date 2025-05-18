@@ -31,11 +31,16 @@
           "RECEIVE_NOTIFICATIONS"
         ]
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.udaychakrapu.wordmate"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "70a9f189-d617-40e5-b9b3-b527b4843bee"
+      }
     }
   }
 }
-
