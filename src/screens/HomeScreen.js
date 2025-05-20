@@ -59,42 +59,6 @@ const HomeScreen = ({ navigation }) => {
 
   useEffect(() => {
     const initialize = async () => {
-      // Load Word of the Day
-      try {
-        const storedDate = await AsyncStorage.getItem('wordDate');
-        const storedWord = await AsyncStorage.getItem('wordOfDay');
-        const today = new Date().toDateString();
-
-        if (storedDate === today && storedWord) {
-          setWordOfTheDay(JSON.parse(storedWord));
-        } else {
-          const randomWord = words[Math.floor(Math.random() * words.length)];
-          await AsyncStorage.setItem('wordDate', today);
-          await AsyncStorage.setItem('wordOfDay', JSON.stringify(randomWord));
-          setWordOfTheDay(randomWord);
-
-          // Update streak
-          const lastStreakDate = await AsyncStorage.getItem('lastStreakDate');
-          const currentStreak = await AsyncStorage.getItem('streak');
-          let streak = currentStreak ? parseInt(currentStreak) : 0;
-
-          if (lastStreakDate !== today) {
-            const yesterday = new Date();
-            yesterday.setDate(yesterday.getDate() - 1);
-            if (lastStreakDate === yesterday.toDateString()) {
-              streak += 1;
-            } else {
-              streak = 1;
-            }
-            await AsyncStorage.setItem('streak', streak.toString());
-            await AsyncStorage.setItem('lastStreakDate', today);
-          }
-        }
-      } catch (error) {
-        console.error('Error loading word of day:', error);
-        Alert.alert('Error', 'Failed to load Word of the Day. Please try again.');
-      }
-
       // Load stats
       try {
         const learned = await AsyncStorage.getItem('wordsLearned');
@@ -145,6 +109,47 @@ const HomeScreen = ({ navigation }) => {
     initialize();
   }, []);
 
+  useFocusEffect(
+    React.useCallback(() => {
+      const loadWordOfTheDay = async () => {
+        try {
+          // Select a new random word every time the screen is focused
+          const randomWord = words[Math.floor(Math.random() * words.length)];
+          setWordOfTheDay(randomWord);
+
+          // Store the new word in AsyncStorage (optional, if you want to persist it during the session)
+          await AsyncStorage.setItem('wordOfDay', JSON.stringify(randomWord));
+
+          // Update streak
+          const today = new Date().toDateString();
+          const lastStreakDate = await AsyncStorage.getItem('lastStreakDate');
+          const currentStreak = await AsyncStorage.getItem('streak');
+          let streak = currentStreak ? parseInt(currentStreak) : 0;
+
+          if (lastStreakDate !== today) {
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            if (lastStreakDate === yesterday.toDateString()) {
+              streak += 1;
+            } else {
+              streak = 1;
+            }
+            await AsyncStorage.setItem('streak', streak.toString());
+            await AsyncStorage.setItem('lastStreakDate', today);
+            setStats((prevStats) => ({
+              ...prevStats,
+              streak,
+            }));
+          }
+        } catch (error) {
+          console.error('Error loading word of day:', error);
+          Alert.alert('Error', 'Failed to load Word of the Day. Please try again.');
+        }
+      };
+      loadWordOfTheDay();
+    }, [])
+  );
+
   useEffect(() => {
     const checkBookmarkStatus = async () => {
       try {
@@ -172,7 +177,7 @@ const HomeScreen = ({ navigation }) => {
             streak: streak ? parseInt(streak) : 0,
             quizScore: quizScore ? parseInt(quizScore) : 0,
           };
-  
+
           setStats((prevStats) => {
             if (prevStats.quizScore !== newStats.quizScore) {
               animateStat(quizScoreScale);
