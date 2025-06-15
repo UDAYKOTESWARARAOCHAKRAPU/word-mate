@@ -441,6 +441,22 @@ const HomeScreen = ({ navigation }) => {
                 </LinearGradient>
                 <Text style={styles.actionText}>Bookmarks</Text>
               </TouchableOpacity>
+
+              <TouchableOpacity
+                style={styles.actionButton}
+                onPress={() => handleActionPress('Dictionary')}
+                activeOpacity={0.8}
+              >
+                <LinearGradient
+                  colors={['#2ECC71', '#27AE60']}
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 1 }}
+                  style={styles.actionGradient}
+                >
+                  <Ionicons name="book-outline" size={28} color="#fff" />
+                </LinearGradient>
+                <Text style={styles.actionText}>Dictionary</Text>
+              </TouchableOpacity>
             </View>
           </Animated.View>
 
@@ -475,28 +491,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
     marginTop: 50,
-  },
-  settingsButton: {
-    position: 'absolute',
-    top: StatusBar.currentHeight + 10 || 40,
-    right: 20,
-    zIndex: 100,
-    elevation: 10,
-    borderRadius: 40,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 4.65,
-  },
-  settingsGradient: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   title: {
     fontSize: 42,

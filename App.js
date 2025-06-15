@@ -21,7 +21,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import FlashcardsScreen from './src/screens/FlashcardsScreen';
 import QuizScreen from './src/screens/QuizScreen';
 import BookmarksScreen from './src/screens/BookmarksScreen';
-// import SettingsScreen from './src/screens/SettingsScreen';
+import DictionaryScreen from './src/screens/DictionaryScreen'; // New import
 
 const Tab = createBottomTabNavigator();
 
@@ -44,8 +44,8 @@ function CustomTabBar({ state, descriptors, navigation }) {
           iconName = isFocused ? 'help-circle' : 'help-circle-outline';
         } else if (route.name === 'Bookmarks') {
           iconName = isFocused ? 'bookmark' : 'bookmark-outline';
-        } else if (route.name === 'Settings') {
-          iconName = isFocused ? 'settings' : 'settings-outline';
+        } else if (route.name === 'Dictionary') {
+          iconName = isFocused ? 'book' : 'book-outline'; // Icon for Dictionary
         }
 
         const onPress = () => {
@@ -144,13 +144,13 @@ export default function App() {
               </ScreenWrapper>
             )}
           </Tab.Screen>
-          {/* <Tab.Screen name="Settings">
+          <Tab.Screen name="Dictionary" options={{ tabBarLabel: 'Dictionary' }}>
             {(props) => (
               <ScreenWrapper>
-                <SettingsScreen {...props} />
+                <DictionaryScreen {...props} />
               </ScreenWrapper>
             )}
-          </Tab.Screen> */}
+          </Tab.Screen>
         </Tab.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
